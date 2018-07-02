@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-bottom">
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -7,14 +7,17 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="./css/bulma-0.6.2/css/bulma.css">
   <link rel="stylesheet" href="./css/bulma-0.6.2/bulma-timeline-master/dist/bulma-timeline.min.css">
-  <script src="./js/jquery-2.1.0.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+        crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+  <script src="./js/jquery-2.1.0.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar is-fixed-bottom is-dark">
+  <nav class="navbar is-transparent">
     <div class="navbar-brand">
       <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
         <span></span>
@@ -28,11 +31,17 @@
         <a class="navbar-item" href="#">
           <i class="fas fa-home"></i>&nbsp;Home
         </a>
-        <a class="navbar-item" href="#About-Me">
+        <a class="navbar-item" href="#about-section">
           <i class="fas fa-user-circle"></i>&nbsp;About Me
         </a>
-        <a class="navbar-item" href="#Projects">
-          <i class="fas fa-book"></i>&nbsp;Projects
+        <a class="navbar-item" href="#developer-section">
+          <i class="fas fa-book"></i>&nbsp;Developer-Story
+        </a>
+        <a class="navbar-item" href="#skill-section">
+          <i class="fas fa-toolbox"></i>&nbsp;Skills
+        </a>
+        <a class="navbar-item" href="#project-section">
+          <i class="fas fa-project-diagram"></i>&nbsp;Projects
         </a>
         <a class="navbar-item" href="#Contact">
           <i class="fas fa-address-book"></i>&nbsp;Contact
@@ -45,31 +54,124 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <!-- Introduction -->
-    <section class="hero">
-      <div class="hero-body">
-        <div class="self_claim">
-          <h1 class="self_heading">Armin</h1>
-          <h2>Full-Stack Developer</h2>
-          <i class="line line-top-left"></i>
-          <i class="line line-side-left"></i>
-          <i class="line line-bottom"></i>
-          <i class="line line-side-right"></i>
-          <i class="line line-top-right"></i>
+
+  <!-- Introduction -->
+  <section class="hero">
+    <div class="container">
+      <div class="self_claim">
+        <h1 class="self_heading">Armin</h1>
+        <h2>Full-Stack Developer</h2>
+        <i class="line line-top-left"></i>
+        <i class="line line-side-left"></i>
+        <i class="line line-bottom"></i>
+        <i class="line line-side-right"></i>
+        <i class="line line-top-right"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction-Text -->
+  <section id="about-section" class="is-large">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <div class="columns">
+            <div class="column is-6">
+              <h1 id="About-Me">About me</h1>
+              <p class="has-text-justified">
+                Hey, my name is Armin and I am a german fullstack-developer. I'm fluent in many programming- and programming-regarding languages
+                and have worked with many common frameworks.
+              </p>
+            </div>
+            <div class="column is-6">
+              <h1 id="My-Profession">My Profession</h1>
+              <p class="has-text-justified">
+                I am a fullstack-developer from Germany for the german company imbus AG. imbus is a leading solution partner for professional
+                software testing and intelligent software quality assurance. I am working on internal programs to keep track of working hours, 
+                manage projects and many more.
+              </p>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-12">
+              <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                  <div class="tags has-addons">
+                    <span class="tag">EMail:</span>
+                    <span class="tag is-success">contact@machigatta.com</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags has-addons">
+                    <span class="tag">Discord:</span>
+                    <span class="tag is-success">Ravenstorm#1191</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </section>
-    <!-- Introduction-Text -->
+    </div>
+  </section>
+  <hr>
+  <section id="developer-section">
     <div class="content">
-      <h1 id="About-Me" class="has-text-centered">About me</h1>
+      <h1 class="has-text-centered">Developer-Story</h1>
       <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-          <p class="has-text-justified">
-            Hey, my name is Armin and i'm a german fullstack-developer. I'm fluent in many programming- and programming-regarding languages
-            and have worked with many common frameworks. There is always work to find somewhere, and I'm here to help.
-          </p>
-          <h2>Languages:</h2>
+        <div class="column is-6 is-offset-3">
+          <div class="timeline is-centered">
+            <header class="timeline-header">
+              <span class="tag is-medium is-dark">Start</span>
+            </header>
+            <div class="timeline-item is-success">
+              <div class="timeline-marker is-success"></div>
+              <div class="timeline-content">
+                <p class="heading">October 2011</p>
+                <p>Started my three-year education as a developer on a local company in germany called imbus AG.</p>
+              </div>
+            </div>
+            <div class="timeline-item is-warning">
+              <div class="timeline-marker is-success is-icon">
+                <i class="fa fa-certificate"></i>
+              </div>
+              <!-- <div class="timeline-marker is-warning is-image is-32x32">
+                    <img src="http://bulma.io/images/placeholders/32x32.png">
+                  </div> -->
+              <div class="timeline-content">
+                <p class="heading">August 2014</p>
+                <p>Finished my education with an degree and started working as a full-time developer for imbus AG. </p>
+              </div>
+            </div>
+            <header class="timeline-header">
+              <span class="tag is-dark">2018</span>
+            </header>
+            <div class="timeline-item is-success">
+              <div class="timeline-marker is-success">
+              </div>
+              <div class="timeline-content">
+                <p class="heading">Current</p>
+                <p>Working for imbus AG as a full-stack web-developer.</p>
+              </div>
+            </div>
+            <header class="timeline-header">
+              <span class="tag is-medium is-dark">End</span>
+            </header>
+          </div>
+
+        </div>
+      </div>
+  </section>
+  </div>
+
+  <hr>
+  <section id="skill-section">
+    <div class="content">
+      <h1 class="has-text-centered">Skills</h1>
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <h1>Languages:</h1>
           <div class="columns">
             <div class="column is-6">
               <h4>Fluent:</h4>
@@ -123,61 +225,15 @@
               </div>
             </div>
           </div>
-          <hr>
-          <h2>Developer-Story:</h2>
-          <div class="columns">
-            <div class="column is-12">
-              <div class="timeline is-centered">
-                <header class="timeline-header">
-                  <span class="tag is-medium is-dark">Start</span>
-                </header>
-                <div class="timeline-item is-success">
-                  <div class="timeline-marker is-success"></div>
-                  <div class="timeline-content">
-                    <p class="heading">October 2011</p>
-                    <p>Started my three-year education as a developer on a local company in germany called imbus AG.</p>
-                  </div>
-                </div>
-                <div class="timeline-item is-warning">
-                  <div class="timeline-marker is-success is-icon">
-                    <i class="fa fa-certificate"></i>
-                  </div>
-                  <!-- <div class="timeline-marker is-warning is-image is-32x32">
-                    <img src="http://bulma.io/images/placeholders/32x32.png">
-                  </div> -->
-                  <div class="timeline-content">
-                    <p class="heading">August 2014</p>
-                    <p>Finished my education with an degree and started working as a full-time developer for imbus AG. </p>
-                  </div>
-                </div>
-                <header class="timeline-header">
-                  <span class="tag is-dark">2018</span>
-                </header>
-                <div class="timeline-item is-success">
-                  <div class="timeline-marker is-success">
-                  </div>
-                  <div class="timeline-content">
-                    <p class="heading">Current</p>
-                    <p>Working for imbus AG as a full-stack web-developer.</p>
-                  </div>
-                </div>
-                <header class="timeline-header">
-                  <span class="tag is-medium is-dark">End</span>
-                </header>
-              </div>
-
-            </div>
-          </div>
         </div>
-
       </div>
     </div>
-
-    <hr>
-
+  </section>
+  <hr>
+  <section id="project-section">
     <div class="content">
       <!-- contact -->
-      <h1 id="Projects" class="has-text-centered">Projects</h1>
+      <h1 class="has-text-centered">Projects</h1>
       <!-- Project-Counter -->
       <nav class="level">
         <div class="level-item has-text-centered">
@@ -226,75 +282,31 @@
         </div>
       </div>
     </div>
-    <hr>
-
-    <div class="content">
-      <!-- contact -->
-      <h1 id="Contact" class="has-text-centered">Contact</h1>
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Your Name">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="your@email.com" value="">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Message</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Any requests or questions?"></textarea>
-            </div>
-          </div>
-
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Send</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
+  </section>
 </body>
-<footer class="footer" style="margin-top: 15px;">
+<footer class="footer">
   <div class="container">
-    <div class="columns">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p class="heading">Made by
-            <strong>Armin Seidling</strong>
-          </p>
+    <div class="content">
+      <div class="columns">
+        <div class="column is-11">
+          <h1>Machigatta</h1>
+        </div>
+        <div class="column is-1">
+          <a href="https://github.com/Machigatta">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/MachigattaDE">
+            <i class="fab fa-twitter"></i>
+          </a>
         </div>
       </div>
-      <div class="column is-4">
-
-        <div>
-          <p class="heading">Discord:
-            <small>Ravenstorm#1191</small>
-          </p>
-          <p class="heading">Email:
-            <small>IAppWare@gmail.com</small>
-          </p>
+      <hr>
+      <div class="columns">
+        <div class="column is-12 has-text-centered">
+          <small>© 2017 Armin Seidling. All right reserved</small>
         </div>
-
       </div>
     </div>
-
   </div>
 </footer>
 

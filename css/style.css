@@ -20,6 +20,10 @@ h1.self_heading {
     opacity: 0;
 }
 
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    font-weight: 500;
+}
+
 .self_claim h2 {
     color: 444;
     text-transform: uppercase;
@@ -426,4 +430,13 @@ h1.self_heading {
 
 .footer {
     padding: 15px;
+}
+
+
+section {
+    padding: 3rem 1.5rem;
+}
+
+footer.footer {
+    margin-top: 15px;border-top:1px solid #dbdbdb;
 }
