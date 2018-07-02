@@ -1,0 +1,429 @@
+.self_claim {
+    position: relative;
+    width: 500px;
+    height: 160px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+h1.self_heading {
+    position: absolute;
+    left: calc(50% - 103px);
+    top: -15px;
+    font-size: 64px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    color: 444;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+.self_claim h2 {
+    color: 444;
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: 30px;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 4px;
+    top: calc(50% - 7px);
+    opacity: 0;
+}
+
+.self_claim .line {
+    display: block;
+    position: absolute;
+    background: #444;
+}
+
+.self_claim .line.line-top-left {
+    right: 80%;
+    width: 0;
+}
+
+.self_claim .line.line-side-left {
+    left: 0;
+}
+
+.self_claim .line.line-top-right {
+    left: 80%;
+}
+
+.self_claim .line.line-side-left,
+.self_claim .line.line-side-right {
+    width: 8px;
+    height: 0;
+}
+
+.self_claim .line.line-bottom {
+    bottom: 0;
+    width: 0;
+}
+
+.self_claim .line.line-side-left,
+.self_claim .line.line-bottom {
+    left: 0;
+}
+
+.self_claim .line.line-top-left,
+.self_claim .line.line-top-right,
+.self_claim .line.line-bottom {
+    height: 8px;
+}
+
+.self_claim .line.line-side-right {
+    right: 0;
+    top: 0;
+}
+
+.self_claim .line.line-side-left,
+.self_claim .line.line-side-right {
+    width: 8px;
+    height: 0;
+}
+
+.self_claim .line.line-top-right {
+    right: 0;
+    width: 0;
+}
+
+.self_claim .line.line-top-left,
+.self_claim .line.line-top-right {
+    top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .self_claim {
+        position: relative;
+        width: 300px;
+        height: 100px;
+        left: 50%;
+        margin-left: -150px;
+    }
+    h1.self_heading {
+        left: calc(50% - 77px);
+        font-size: 46px;
+    }
+    .self_claim .line.line-side-left,
+    .self_claim .line.line-side-right {
+        width: 5px;
+    }
+    .self_claim .line.line-top-left,
+    .self_claim .line.line-top-right,
+    .self_claim .line.line-bottom {
+        height: 5px;
+    }
+}
+
+h1.self_heading {
+    -webkit-animation: fadeIn 0.5s linear 0.25s 1 normal forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 0.5s linear 0.25s 1 normal forwards;
+    /* Firefox < 16 */
+    -ms-animation: fadeIn 0.5s linear 0.25s 1 normal forwards;
+    /* Internet Explorer */
+    -o-animation: fadeIn 0.5s linear 0.25s 1 normal forwards;
+    /* Opera < 12.1 */
+    animation: fadeIn 0.5s linear 0.25s 1 normal forwards;
+}
+
+.self_claim h2 {
+    -webkit-animation: fadeIn 0.25s linear 1.25s 1 normal forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 0.25s linear 1.25s 1 normal forwards;
+    /* Firefox < 16 */
+    -ms-animation: fadeIn 0.25s linear 1.25s 1 normal forwards;
+    /* Internet Explorer */
+    -o-animation: fadeIn 0.25s linear 1.25s 1 normal forwards;
+    /* Opera < 12.1 */
+    animation: fadeIn 0.25s linear 1.25s 1 normal forwards;
+}
+
+.line-top-left,
+.line-top-right {
+    -webkit-animation: resizeSmall 0.25s linear 0s 1 normal forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: resizeSmall 0.25s linear 0s 1 normal forwards;
+    /* Firefox < 16 */
+    -ms-animation: resizeSmall 0.25s linear 0s 1 normal forwards;
+    /* Internet Explorer */
+    -o-animation: resizeSmall 0.25s linear 0s 1 normal forwards;
+    /* Opera < 12.1 */
+    animation: resizeSmall 0.25s linear 0s 1 normal forwards;
+}
+
+.line-side-left,
+.line-side-right {
+    -webkit-animation: resizeSIDES 0.5s linear 0.25s 1 normal forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: resizeSIDES 0.5s linear 0.25s 1 normal forwards;
+    /* Firefox < 16 */
+    -ms-animation: resizeSIDES 0.5s linear 0.25s 1 normal forwards;
+    /* Internet Explorer */
+    -o-animation: resizeSIDES 0.5s linear 0.25s 1 normal forwards;
+    /* Opera < 12.1 */
+    animation: resizeSIDES 0.5s linear 0.25s 1 normal forwards;
+}
+
+.line-bottom {
+    -webkit-animation: resizeBig 0.5s linear 0.75s 1 normal forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: resizeBig 0.5s linear 0.75s 1 normal forwards;
+    /* Firefox < 16 */
+    -ms-animation: resizeBig 0.5s linear 0.75s 1 normal forwards;
+    /* Internet Explorer */
+    -o-animation: resizeBig 0.5s linear 0.75s 1 normal forwards;
+    /* Opera < 12.1 */
+    animation: resizeBig 0.5s linear 0.75s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes resizeSmall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes resizeSmall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes resizeSmall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes resizeSmall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes resizeSmall {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+@keyframes resizeBig {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes resizeBig {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes resizeBig {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes resizeBig {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes resizeBig {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@keyframes resizeSIDES {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* Firefox < 16 */
+
+@-moz-keyframes resizeSIDES {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes resizeSIDES {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* Internet Explorer */
+
+@-ms-keyframes resizeSIDES {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* Opera < 12.1 */
+
+@-o-keyframes resizeSIDES {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+/* https://github.com/jgthms/bulma/issues/776 */
+
+.columns {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 1rem;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.timeline .timeline-item .timeline-marker.is-icon {
+    padding: .15rem;
+}
+
+.footer {
+    padding: 15px;
+}
