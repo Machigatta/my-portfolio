@@ -1,0 +1,61 @@
+{
+    "check":{
+        "57e3351cda894696294516264fade6e0": "acff46b161a3b7d6ed01ba79a032acc9",
+        "4265a3dd4f6bb8c10dbb723ba32fc8f5": "d1bd83a33f1a841ab7fda32449746cc4"
+    },
+    "projects": [
+        {
+            "name": "Twitch Clip Download",
+            "shortcut": "tcd",
+            "type": "C# Application",
+            "version": "3.2",
+            "last_update": "02.02.2019",
+            "description": "Downloads multiple Twitch-Clips based on many different options.",
+            "repo_link": "https://github.com/Machigatta/twitch-clip-downloader",
+            "downloads": [
+                {
+                    "version": "3.0",
+                    "type": "zip"
+                },
+                {
+                    "version": "3.1",
+                    "type": "zip"
+                },
+                {
+                    "version": "3.2",
+                    "type": "zip"
+                }
+            ]
+        },
+        {
+            "name": "return-null",
+            "shortcut": "return-null",
+            "type": "E-Book",
+            "version": "0.1",
+            "last_update": "26.09.2018",
+            "description": "Starting Projects we won't finish. This E-Book targets the process of starting projects we will be stuck with in our entire career.",
+            "repo_link": "https://github.com/Machigatta/return-null",
+            "downloads": []
+        },
+        {
+            "name": "Steam Deal Crawler",
+            "shortcut": "sdc",
+            "type": "Node.js Bot",
+            "version": "1.0.5",
+            "last_update": "18.01.2018",
+            "description": "This nodeJs-Bot is a simple crawler to search through a specific Tag you always wanted to have.<br>This node-js crawler searches through a tag-name and lists every discount with percentage and price. The export of the result is on your side.",
+            "repo_link": "https://github.com/Machigatta/steam-deal-crawler",
+            "downloads": []
+        },
+        {
+            "name": "RSS to Trello - Bot",
+            "shortcut": "rrsTrello",
+            "type": "Node.js Bot",
+            "version": "1.0",
+            "last_update": "09.01.2018",
+            "description": "The main purpose of the bot is to gather many rss-feed-links and ask for updates [in a specific interval]. <br>If there is a new post on the rss-feed, he will create a trello-card in a specific trellobord->trellocolumn->position 1.",
+            "repo_link": "https://github.com/Machigatta/rss-trello-bot",
+            "downloads": []
+        }
+    ]
+}
