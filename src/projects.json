@@ -5,7 +5,20 @@
     },
     "projects": [
         {
+            "name": "World of Warcraft - GroupFinder",
+            "cType": 2,
+            "shortcut": "WGF",
+            "type": "PHP Application",
+            "version": "2.8",
+            "last_update": "17.04.2019",
+            "description": "Twitch-Streamer and Players are able to use this tool to set up lists and find partners for their dungeons and events.",
+            "repo_link": "https://github.com/Machigatta/discord-embed-generator",
+            "hyperlink": "https://wowgroupfinder.com/",
+            "downloads": []
+        },
+        {
             "name": "Twitch Clip Downloader",
+            "cType": 1,
             "shortcut": "tcd",
             "type": "C# Application",
             "version": "3.3",
@@ -33,6 +46,7 @@
         },
         {
             "name": "return-null",
+            "cType": 4,
             "shortcut": "return-null",
             "type": "E-Book",
             "version": "0.1",
@@ -43,6 +57,7 @@
         },
         {
             "name": "Steam Deal Crawler",
+            "cType": 1,
             "shortcut": "sdc",
             "type": "Node.js Bot",
             "version": "1.0.5",
@@ -52,13 +67,104 @@
             "downloads": []
         },
         {
-            "name": "RSS to Trello - Bot",
-            "shortcut": "rrsTrello",
-            "type": "Node.js Bot",
+            "name": "Random Trello-Card Picker",
+            "cType": 2,
+            "shortcut": "rTCD",
+            "type": "Ember.js",
             "version": "1.0",
-            "last_update": "09.01.2018",
-            "description": "The main purpose of the bot is to gather many rss-feed-links and ask for updates [in a specific interval]. <br>If there is a new post on the rss-feed, he will create a trello-card in a specific trellobord->trellocolumn->position 1.",
-            "repo_link": "https://github.com/Machigatta/rss-trello-bot",
+            "last_update": "08.04.2019",
+            "description": "Pick a random card out of your Trello-Boards to work on some random projects.",
+            "repo_link": "https://github.com/Machigatta/random-trello-card-picker",
+            "hyperlink": "https://trello.machigatta.com/",
+            "downloads": []
+        },
+        {
+            "name": "Discord Embed Generator",
+            "cType": 2,
+            "shortcut": "DiscordEGen",
+            "type": "Aurelia.js",
+            "version": "1.1",
+            "last_update": "14.04.2019",
+            "description": "Generate some simple embeds to test your discord-webhooks.",
+            "repo_link": "https://github.com/Machigatta/discord-embed-generator",
+            "hyperlink": "https://embed.machigatta.com/",
+            "downloads": []
+        },
+        {
+            "name": "League of Antitilt",
+            "cType": 1,
+            "shortcut": "loa",
+            "type": "C# WPF Application",
+            "version": "1.0",
+            "last_update": "22.03.2019",
+            "description": "Just a little Troll-App to notify yourself after the game startet to 'mute them all'!",
+            "repo_link": "https://github.com/Machigatta/league-of-antitilt",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-theme",
+            "cType": 3,
+            "shortcut": "wshbrT",
+            "type": "Wordpress Theme",
+            "version": "0.7",
+            "last_update": "17.03.2019",
+            "description": "This is the repository for the main-design for the german news-website https://wshbr.de/",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-theme",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-wordpress-themoviedb-sidebar",
+            "cType": 3,
+            "shortcut": "wshbrTMDBs",
+            "type": "Wordpress Plugin",
+            "version": "1.2",
+            "last_update": "17.03.2019",
+            "description": "A simple wordpress plugin to grab information for a movie or series from https://www.themoviedb.org into a sidebar",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-themoviedb-sidebar",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-share-to-discord",
+            "cType": 3,
+            "shortcut": "wshbrSTD",
+            "type": "Wordpress Plugin",
+            "version": "1.1",
+            "last_update": "17.03.2019",
+            "description": "A simple wordpress plugin to share your posts with your discord-servers.",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-share-to-discord",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-review",
+            "cType": 3,
+            "shortcut": "wshbrReview",
+            "type": "Wordpress Plugin",
+            "version": "2.0",
+            "last_update": "12.03.2019",
+            "description": "A wordpress plugin to hook a simple review form to your posts",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-review",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-spoiler",
+            "cType": 3,
+            "shortcut": "wshbrSpoiler",
+            "type": "Wordpress Plugin",
+            "version": "1.1",
+            "last_update": "12.03.2019",
+            "description": "A Wordpress-Plugin to add a \"Spoiler\" overlay on thumbnails",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-spoiler",
+            "downloads": []
+        },
+        {
+            "name": "wshbr-featured-slider",
+            "cType": 3,
+            "shortcut": "wshbrFSlider",
+            "type": "Wordpress Plugin",
+            "version": "1.0",
+            "last_update": "28.02.2019",
+            "description": "A simple wordpress plugin to hook a picture to your posts and use it on a configurable slider in your Theme.",
+            "repo_link": "https://github.com/Machigatta/wshbr-wordpress-featured-slider",
             "downloads": []
         }
     ]

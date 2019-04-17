@@ -2,64 +2,100 @@ import { h, Component } from 'preact';
 import style from './style.less';
 const prjs = require("../../projects.json");
 
-export default class Home extends Component  {
+export default class Home extends Component {
 
-	createProjectCards = () => {
+	createProjectCards = (cType) => {
 		let finishedCards = [];
 		prjs.projects.forEach(element => {
+			if (cType != element.cType) {
+				return;
+			}
 			let downloads = [];
-			if(element.downloads.length > 0){
+			if (element.downloads.length > 0) {
 				element.downloads.forEach(dElement => {
-					let downloadurl = "downloads/"+element.shortcut+"/"+dElement.version+"."+dElement.type
+					let downloadurl = "downloads/" + element.shortcut + "/" + dElement.version + "." + dElement.type
 					downloads.push(
 						<span>&nbsp;
 							<a href={downloadurl}>
 								<button class="btn btn-success btn-sm">
-									{dElement.version.replace("_",".")}
+									{dElement.version.replace("_", ".")}
 								</button>
 							</a>
-						</span>	
+						</span>
 					)
 				});
 			}
-			
+
 			finishedCards.push(
-			<div class="col-md-6">
-				<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark text-light">
-					<div class="col p-4 d-flex flex-column position-static">
-						<strong class="d-inline-block mb-2 text-primary">{element.type}</strong>
-						<h3 class="mb-0">{element.name}</h3>
-						<div class="mb-1 text-muted">{element.last_update} | <small>Version: {element.version}</small> | <a href={element.repo_link} class="pull-right"><svg role="img" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></div>
-						{downloads.length > 0 &&
-							<div class="mb-1">Downloads: {downloads}</div>
-						}
-						<p class="card-text mb-auto">{element.description}</p>
+				<div class="col-md-6">
+					<div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark text-light">
+						<div class="col p-4 d-flex flex-column position-static">
+							<strong class="d-inline-block mb-2 text-primary">{element.type}</strong>
+							<h3 class="mb-0">{element.name}</h3>
+							<div class="mb-1 text-muted">{element.last_update} | <small>Version: {element.version}</small> | &nbsp; 
+							{element.repo_link != "" &&
+								<a href={element.repo_link} class="pull-right"><svg class="svg-icon svg-github" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg></a>
+							}
+							{typeof element.hyperlink != 'undefined' && element.hyperlink != ""  &&
+								<a href={element.repo_link} class="pull-right">&nbsp; <svg class="svg-icon svg-hyperlink" role="img" viewBox="0 0 20 20"><path d="M16.469,8.924l-2.414,2.413c-0.156,0.156-0.408,0.156-0.564,0c-0.156-0.155-0.156-0.408,0-0.563l2.414-2.414c1.175-1.175,1.175-3.087,0-4.262c-0.57-0.569-1.326-0.883-2.132-0.883s-1.562,0.313-2.132,0.883L9.227,6.511c-1.175,1.175-1.175,3.087,0,4.263c0.288,0.288,0.624,0.511,0.997,0.662c0.204,0.083,0.303,0.315,0.22,0.52c-0.171,0.422-0.643,0.17-0.52,0.22c-0.473-0.191-0.898-0.474-1.262-0.838c-1.487-1.485-1.487-3.904,0-5.391l2.414-2.413c0.72-0.72,1.678-1.117,2.696-1.117s1.976,0.396,2.696,1.117C17.955,5.02,17.955,7.438,16.469,8.924 M10.076,7.825c-0.205-0.083-0.437,0.016-0.52,0.22c-0.083,0.205,0.016,0.437,0.22,0.52c0.374,0.151,0.709,0.374,0.997,0.662c1.176,1.176,1.176,3.088,0,4.263l-2.414,2.413c-0.569,0.569-1.326,0.883-2.131,0.883s-1.562-0.313-2.132-0.883c-1.175-1.175-1.175-3.087,0-4.262L6.51,9.227c0.156-0.155,0.156-0.408,0-0.564c-0.156-0.156-0.408-0.156-0.564,0l-2.414,2.414c-1.487,1.485-1.487,3.904,0,5.391c0.72,0.72,1.678,1.116,2.696,1.116s1.976-0.396,2.696-1.116l2.414-2.413c1.487-1.486,1.487-3.905,0-5.392C10.974,8.298,10.55,8.017,10.076,7.825"></path></svg></a>
+							}
+							</div>
+							{downloads.length > 0 &&
+								<div class="mb-1">Downloads: {downloads}</div>
+							}
+							<p class="card-text mb-auto">{element.description}</p>
+						</div>
 					</div>
-				</div>
-			</div>)
+				</div>)
 		});
 		return finishedCards;
 	}
-  
-  
+
+
 	render() {
-	  return(
-		
-		<main role="main">
-			<section class="jumbotron text-center">
-				<div class="container">
-					<h1 class="jumbotron-heading">Machigatta</h1>
-					<p class="lead text-muted">Senior Fullstack Developer</p>
-				</div>
-			</section>
-			<div class="album py-5 bg-light">
-				<div class="container">
-					<div class="row">
-						{this.createProjectCards()}
+		return (
+
+			<main role="main">
+				<section class="jumbotron text-center">
+					<div class="container">
+						<h1 class="jumbotron-heading">Machigatta</h1>
+						<p class="lead text-muted">Senior Fullstack Developer</p>
 					</div>
-				</div>
+				</section>
+				<div class="album py-5 bg-light">
+					<div class="container">
+						<h1 class="text-muted"><svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.237,3.056H2.93c-0.694,0-1.263,0.568-1.263,1.263v8.837c0,0.694,0.568,1.263,1.263,1.263h4.629v0.879c-0.015,0.086-0.183,0.306-0.273,0.423c-0.223,0.293-0.455,0.592-0.293,0.92c0.07,0.139,0.226,0.303,0.577,0.303h4.819c0.208,0,0.696,0,0.862-0.379c0.162-0.37-0.124-0.682-0.374-0.955c-0.089-0.097-0.231-0.252-0.268-0.328v-0.862h4.629c0.694,0,1.263-0.568,1.263-1.263V4.319C18.5,3.625,17.932,3.056,17.237,3.056 M8.053,16.102C8.232,15.862,8.4,15.597,8.4,15.309v-0.89h3.366v0.89c0,0.303,0.211,0.562,0.419,0.793H8.053z M17.658,13.156c0,0.228-0.193,0.421-0.421,0.421H2.93c-0.228,0-0.421-0.193-0.421-0.421v-1.263h15.149V13.156z M17.658,11.052H2.509V4.319c0-0.228,0.193-0.421,0.421-0.421h14.308c0.228,0,0.421,0.193,0.421,0.421V11.052z"></path>
+						</svg> Applications</h1>
+						<div class="row">
+							{this.createProjectCards(1)}
+						</div>
+					</div>
+					<div class="container">
+						<h1 class="text-muted"><svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M14.911,1.295H5.09c-0.737,0-1.339,0.603-1.339,1.339v14.733c0,0.736,0.603,1.338,1.339,1.338h9.821c0.737,0,1.339-0.602,1.339-1.338V2.634C16.25,1.898,15.648,1.295,14.911,1.295 M15.357,17.367c0,0.24-0.205,0.445-0.446,0.445H5.09c-0.241,0-0.446-0.205-0.446-0.445v-0.893h10.714V17.367z M15.357,15.58H4.644V4.42h10.714V15.58z M15.357,3.527H4.644V2.634c0-0.241,0.205-0.446,0.446-0.446h9.821c0.241,0,0.446,0.206,0.446,0.446V3.527z"></path>
+						</svg> Websites</h1>
+						<div class="row">
+							{this.createProjectCards(2)}
+						</div>
+					</div>
+					<div class="container">
+						<h1 class="text-muted"><svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M17.391,2.406H7.266c-0.232,0-0.422,0.19-0.422,0.422v3.797H3.047c-0.232,0-0.422,0.19-0.422,0.422v10.125c0,0.232,0.19,0.422,0.422,0.422h10.125c0.231,0,0.422-0.189,0.422-0.422v-3.797h3.797c0.232,0,0.422-0.19,0.422-0.422V2.828C17.812,2.596,17.623,2.406,17.391,2.406 M12.749,16.75h-9.28V7.469h3.375v5.484c0,0.231,0.19,0.422,0.422,0.422h5.483V16.75zM16.969,12.531H7.688V3.25h9.281V12.531z"></path></svg>
+							 Plugins / Extensions</h1>
+						<div class="row">
+							{this.createProjectCards(3)}
+						</div>
+					</div>
+					<div class="container">
+						<h1 class="text-muted"><svg class="svg-icon" viewBox="0 0 20 20"><path d="M17.657,2.982H2.342c-0.234,0-0.425,0.191-0.425,0.426v10.21c0,0.234,0.191,0.426,0.425,0.426h3.404v2.553c0,0.397,0.48,0.547,0.725,0.302l2.889-2.854h8.298c0.234,0,0.426-0.191,0.426-0.426V3.408C18.083,3.174,17.892,2.982,17.657,2.982M17.232,13.192H9.185c-0.113,0-0.219,0.045-0.3,0.124l-2.289,2.262v-1.96c0-0.233-0.191-0.426-0.425-0.426H2.767V3.833h14.465V13.192z M10,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.488-0.668,1.488-1.489C11.488,7.905,10.821,7.237,10,7.237 M10,9.364c-0.352,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C10.638,9.077,10.351,9.364,10,9.364 M14.254,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489s1.489-0.668,1.489-1.489C15.743,7.905,15.075,7.237,14.254,7.237 M14.254,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.352,0,0.639,0.287,0.639,0.638C14.893,9.077,14.605,9.364,14.254,9.364 M5.746,7.237c-0.821,0-1.489,0.668-1.489,1.489c0,0.821,0.668,1.489,1.489,1.489c0.821,0,1.489-0.668,1.489-1.489C7.234,7.905,6.566,7.237,5.746,7.237 M5.746,9.364c-0.351,0-0.638-0.288-0.638-0.638c0-0.351,0.287-0.638,0.638-0.638c0.351,0,0.638,0.287,0.638,0.638C6.384,9.077,6.096,9.364,5.746,9.364"></path></svg> 
+						Others</h1>
+						<div class="row">
+							{this.createProjectCards(4)}
+						</div>
+					</div>
 			</div>
-		</main>
+		</main >
 	  )
 	}
-  }
+}
