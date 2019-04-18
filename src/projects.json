@@ -166,6 +166,39 @@
             "description": "A simple wordpress plugin to hook a picture to your posts and use it on a configurable slider in your Theme.",
             "repo_link": "https://github.com/Machigatta/wshbr-wordpress-featured-slider",
             "downloads": []
+        },
+        {
+            "name": "discourse-humble-box",
+            "cType": 3,
+            "shortcut": "dckokoroHUMBLEbox",
+            "type": "Discourse Plugin",
+            "version": "1.0",
+            "last_update": "23.03.2019",
+            "description": "This plugin for Discourse uses the discourse-api to decorate the cooked-posts. Primary usage is for properly embedding Humblebundle.com-Links in Discourse posts and parsing them into better looking iframes.",
+            "repo_link": "https://github.com/kokoro-ko/discourse-humble-box",
+            "downloads": []
+        },
+        {
+            "name": "discourse-anime-manga-box",
+            "cType": 3,
+            "shortcut": "dckokoroAMbox",
+            "type": "Discourse Plugin",
+            "version": "1.0",
+            "last_update": "07.10.2017",
+            "description": "This plugin for Discourse uses the discourse-api to decorate the cooked-posts. Primary usage is for properly embedding Anime- and Manga-Links in Discourse posts and parsing them into better looking iframes. ",
+            "repo_link": "https://github.com/kokoro-ko/discourse-kokoro-box",
+            "downloads": []
+        },
+        {
+            "name": "discourse-onebox-endpoint",
+            "cType": 3,
+            "shortcut": "dckokoroEndpoint",
+            "type": "PHP View",
+            "version": "1.0",
+            "last_update": "23.03.2019",
+            "description": "Endpoints for 'discourse-humble-box' and 'discourse-anime-manga-box'.",
+            "repo_link": "https://github.com/kokoro-ko/onebox-endpoint",
+            "downloads": []
         }
     ]
 }
