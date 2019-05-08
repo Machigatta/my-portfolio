@@ -199,6 +199,17 @@
             "description": "Endpoints for 'discourse-humble-box' and 'discourse-anime-manga-box'.",
             "repo_link": "https://github.com/kokoro-ko/onebox-endpoint",
             "downloads": []
+        },
+        {
+            "name": "psn-store-scraper",
+            "cType": 3,
+            "shortcut": "npmPSNStoreScraper",
+            "type": "Node-Package",
+            "version": "1.0.1",
+            "last_update": "07.05.2019",
+            "description": "Retrieve meta-data from the PlayStation-Network store for Objects (Games, DLCs etc)",
+            "repo_link": "https://github.com/Machigatta/psn-store-scraper",
+            "downloads": []
         }
     ]
 }

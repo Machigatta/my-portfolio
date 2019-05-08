@@ -31,7 +31,14 @@ export default class Header extends Component {
 						
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
+						<div class="spinner-burger-master">
+								<input type="checkbox" id="spinner-burger" />
+								<label for="spinner-burger" class="spinner-burger-label">
+									<div class="sp diagonal part-1"></div>
+									<div class="sp horizontal"></div>
+									<div class="sp diagonal part-2"></div>
+								</label>
+							</div>
 					</button>
 					</div>
 				</div>
