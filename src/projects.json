@@ -27,19 +27,19 @@
             "repo_link": "https://github.com/Machigatta/twitch-clip-downloader",
             "downloads": [
                 {
-                    "version": "3.0",
+                    "version": "3_0",
                     "type": "zip"
                 },
                 {
-                    "version": "3.1",
+                    "version": "3_1",
                     "type": "zip"
                 },
                 {
-                    "version": "3.2",
+                    "version": "3_2",
                     "type": "zip"
                 },
                 {
-                    "version": "3.3",
+                    "version": "3_3",
                     "type": "zip"
                 }
             ]
