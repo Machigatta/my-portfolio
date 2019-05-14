@@ -58,8 +58,7 @@ export default class Home extends Component {
 			<main role="main">
 				<section class="jumbotron text-center">
 					<div class="container">
-						<h1 class="jumbotron-heading">Machigatta</h1>
-						<p class="lead text-muted">Senior Fullstack Developer</p>
+						<img class="hero-image" src="/assets/hero.png"/>
 					</div>
 				</section>
 				<div class="album py-5 bg-light">
